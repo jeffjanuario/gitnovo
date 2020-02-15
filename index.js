@@ -11,7 +11,7 @@ app.get('/', async (req, res, next) => {
 
 app.get('*', (req, res) => {
     if (!res.headersSent) {
-        console.log(new Error('Status:PAGE NOT FOUND'));
+        console.log(new Error('Page not found'));
         res.status(400).send({ message: 'Status:PAGE NOT FOUND' });
     }
 })
